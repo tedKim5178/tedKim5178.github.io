@@ -3,10 +3,10 @@
 @import 'libs/mixins';
 @import 'libs/skel';
 @import 'font-awesome.min.css';
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900');
 
 /*
-	Stellar by HTML5 UP
+	Phantom by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -23,25 +23,22 @@
 	@include skel-layout((
 		reset: 'full',
 		boxModel: 'border',
-		grid: ( gutters: 1.5em ),
+		grid: (
+			gutters: 2em
+		),
 		breakpoints: (
+			medium: (
+				grid: (
+					gutters: 1.5em
+				)
+			),
 			small: (
-				grid: ( gutters: 1em ),
+				grid: (
+					gutters: 1em
+				)
 			)
 		)
 	));
-
-	@mixin color($p) {
-		@include color-typography($p);
-		@include color-box($p);
-		@include color-button($p);
-		@include color-form($p);
-		@include color-icon($p);
-		@include color-list($p);
-		@include color-section($p);
-		@include color-table($p);
-		@include color-spotlight($p);
-	}
 
 // Base.
 
@@ -50,22 +47,20 @@
 
 // Component.
 
-	@import 'components/box';
-	@import 'components/button';
-	@import 'components/form';
-	@import 'components/icon';
-	@import 'components/image';
-	@import 'components/list';
 	@import 'components/section';
+	@import 'components/icon';
+	@import 'components/list';
+	@import 'components/form';
+	@import 'components/box';
+	@import 'components/image';
 	@import 'components/table';
-	@import 'components/features';
-	@import 'components/statistics';
-	@import 'components/spotlight';
+	@import 'components/button';
+	@import 'components/tiles';
 
 // Layout.
 
 	@import 'layout/header';
-	@import 'layout/nav';
+	@import 'layout/menu';
 	@import 'layout/main';
 	@import 'layout/footer';
 	@import 'layout/wrapper';
